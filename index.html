@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm Kiếm Scripts | Sea | Minh Hub</title> 
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Tông chủ đạo: Nền Xanh Nhạt (Sky-50) và Nội dung Trắng */
+      .card-link {
+          text-decoration: none;
+      }
+      /* Ẩn thẻ <a> khi script-card bị ẩn để tránh bị lỗi click */
+      .script-card[style*="display: none"] {
+          display: none !important;
+      }
+    </style>
+</head>
+
+<body class="bg-sky-50 text-slate-800 transition-colors duration-200">
+
+<main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
+    
+    <header class="flex flex-wrap items-center justify-start text-xl font-bold border-b pb-4 border-sky-200 mb-8 gap-3">
+        <div class="flex items-center flex-shrink-0">
+            <h1 class="text-sky-800 mr-3 text-2xl">Sea | Minh Hub</h1> 
+            <img 
+                src="https://github.com/Sea-MinhHub/Info/blob/main/Logo.jpg?raw=true" 
+                alt="Sea | Minh Hub Icon" 
+                class="w-8 h-8 rounded-full object-cover border-2 border-sky-500 shadow-lg"
+                width="32" height="32"
+                loading="eager"
+            >
+        </div>
+        
+        <div class="flex items-center gap-3 ml-auto sm:ml-4">
+            
+            <a href="https://discord.gg/nHnsJF9TbN" target="_blank" rel="noopener noreferrer" 
+               title="Discord Server"
+               class="flex items-center justify-center p-2 rounded-full bg-indigo-500 hover:bg-indigo-600 text-white transition duration-200 shadow-md">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 3a1 1 0 00-1-1H5a1 1 0 00-1 1v14.4c0 .4.2.7.5.9.3.2.7.2 1.1 0l2.7-1.6 2.3 2.1c.4.4 1 .4 1.4 0l2.3-2.1 2.7 1.6c.4.2.8.2 1.1 0a1 1 0 00.5-.9V3zM8.3 11.2c-.7 0-1.3-.6-1.3-1.3s.6-1.3 1.3-1.3 1.3.6 1.3 1.3-.6 1.3-1.3 1.3zm7.4 0c-.7 0-1.3-.6-1.3-1.3s.6-1.3 1.3-1.3 1.3.6 1.3 1.3-.6 1.3-1.3 1.3z"/></svg>
+            </a>
+
+            <a href="https://www.youtube.com/@sea_minh" target="_blank" rel="noopener noreferrer" 
+               title="YouTube Channel"
+               class="flex items-center justify-center p-2 rounded-full bg-red-600 hover:bg-red-700 text-white transition duration-200 shadow-md">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.155a3.67 3.67 0 00-2.454-.783C15.827 2 12 2 12 2s-3.827 0-5.161.372A3.67 3.67 0 004.385 3.155a3.68 3.68 0 00-.783 2.454C3 7.827 3 12 3 12s0 4.173.372 5.161a3.67 3.67 0 00.783 2.454 3.68 3.68 0 002.454.783c1.334.372 5.161.372 5.161.372s3.827 0 5.161-.372a3.67 3.67 0 002.454-.783 3.68 3.68 0 00.783-2.454C21 16.173 21 12 21 12s0-4.173-.372-5.161a3.67 3.67 0 00-.783-2.454zM9.545 15.56V8.44L15.65 12l-6.105 3.56z"/></svg>
+            </a>
+        </div>
+    </header>
+
+    <h2 class="text-4xl font-extrabold text-slate-900 mb-6">
+        Tìm Kiếm Scripts
+    </h2>
+
+    <div class="bg-white p-6 rounded-xl shadow-lg border border-sky-300 mb-8">
+        <div class="flex flex-col sm:flex-row gap-4">
+            <input 
+                type="text" 
+                id="search-input" 
+                placeholder="Nhập tên script, game, hoặc từ khóa..." 
+                class="flex-grow p-3 border-2 border-sky-200 rounded-lg focus:outline-none focus:border-sky-500 transition duration-200"
+                onkeypress="if(event.keyCode === 13) filterScripts()"
+            >
+            <button 
+                id="search-button"
+                onclick="filterScripts()"
+                class="flex items-center justify-center gap-2 bg-sky-600 text-white font-bold px-6 py-3 rounded-lg 
+                       hover:bg-sky-700 transition duration-200 shadow-md flex-shrink-0"
+            >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                Tìm Kiếm
+            </button>
+        </div>
+    </div>
+    
+    <section id="scripts-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <a href="https://sea-minhhub.github.io/Scripts/SeaMinhSaken" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="card-link script-card"
+           data-title="SeaMinhSaken Forsaken V 1.5 Update Christmas">
+            
+            <div class="bg-white border border-sky-300 rounded-xl shadow-lg overflow-hidden 
+                        hover:shadow-2xl hover:border-sky-500 transition-all duration-300 
+                        transform hover:-translate-y-1 active:scale-[0.98] cursor-pointer">
+                
+                <div class="relative w-full aspect-video overflow-hidden">
+                    <img 
+                        src="https://xenoscripts.com/uploads/images/6953a1df804da-creenshot-2025-12-30-165638-400w.webp" 
+                        alt="Screenshot SeaMinhSaken" 
+                        class="w-full h-full object-cover transition-transform duration-500 hover:scale-[1.05]"
+                        loading="lazy"
+                    >
+                </div>
+                
+                <div class="p-4 space-y-2">
+                    <h3 class="text-lg font-bold text-slate-900 leading-tight">
+                        SeaMinhSaken - Forsaken V 1.5 Update Christmas
+                    </h3>
+                    <p class="text-sm text-slate-500">
+                        <span class="text-green-500 font-semibold">Đã Cập Nhật</span> | Forsaken
+                    </p>
+                    
+                    <div class="pt-2">
+                        <button class="w-full bg-sky-600 text-white font-semibold py-2 rounded-lg 
+                                       hover:bg-sky-700 transition duration-200 shadow-md">
+                            Xem Chi Tiết / Lấy Code
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </a>
+        
+    </section>
+    
+    <div id="no-results" class="bg-yellow-100 border border-yellow-300 text-yellow-800 p-4 rounded-lg hidden mt-8">
+        <p class="font-semibold">Không tìm thấy kết quả.</p>
+        <p class="text-sm">Vui lòng thử lại với từ khóa khác.</p>
+    </div>
+
+</main>
+
+<script>
+    /**
+     * Hàm lọc các script dựa trên từ khóa tìm kiếm.
+     */
+    function filterScripts() {
+        const input = document.getElementById('search-input');
+        // Xóa khoảng trắng thừa và chuyển thành chữ hoa để so sánh không phân biệt chữ hoa/thường
+        const filter = input.value.trim().toUpperCase(); 
+        const cards = document.getElementsByClassName('script-card');
+        const noResults = document.getElementById('no-results');
+        let found = 0;
+
+        for (let i = 0; i < cards.length; i++) {
+            const card = cards[i];
+            // Lấy nội dung từ data attribute để tìm kiếm
+            const title = card.getAttribute('data-title').toUpperCase();
+            
+            if (title.includes(filter)) {
+                // Đặt thành block để đảm bảo card hiển thị đúng trong grid
+                card.style.display = "block"; 
+                found++;
+            } else {
+                card.style.display = "none"; // Ẩn card
+            }
+        }
+        
+        // Hiển thị hoặc ẩn thông báo không có kết quả
+        if (found === 0) {
+            noResults.style.display = "block";
+        } else {
+            noResults.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
